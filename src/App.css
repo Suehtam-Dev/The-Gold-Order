@@ -1,0 +1,216 @@
+body{
+  color: #c9a44f; 
+  background-color: rgb(233, 233, 233);
+
+  margin: 0;
+  
+  font-family: 'Cinzel', serif;
+}
+
+main{
+  margin: 15px;
+}
+
+header{
+
+    background-image: linear-gradient(45deg, rgb(18, 26, 44), rgb(3, 15, 24));
+    align-items: center;
+
+    border-bottom: 5px solid #c9a44f;
+    padding-left: 5vh;
+    padding-bottom: 5px;
+   
+}
+
+header .GoldOrder{
+  height: 15vh;
+  margin-right: auto;
+
+}
+
+.Alert-Box{
+  background-color: red;
+  height: 50px;
+  width: 50%;
+  
+}
+
+/* Questionário card */
+.flex-submit{
+  display: flex;
+  padding: 15px;
+
+  flex-direction: column;
+  align-items: flex-start;
+  
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  background: rgba(231, 231, 231, 0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+
+}
+
+/* INPUT */
+.SubmitBox{
+
+  padding: 12px 14px;
+  width: 90%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: justify;
+
+}
+
+.SubmitBox:focus {
+  border-color: #c9a44f; 
+  outline: none;
+  box-shadow: 0 0 4px #c9a44f;
+}
+
+.Input-valid:valid, .Input-valid:focus{
+  border-color: rgb(46, 155, 46);
+  box-shadow: 0 0 4px rgb(46, 155, 46);
+}
+
+.Input-invalid:invalid:not(:focus), .Input-invalid:invalid:focus{
+  border-color:  rgb(128, 0, 0);
+  box-shadow: 0 0 4px rgb(128, 0, 0);
+}
+
+.flex-submit button{
+  align-self: center;
+
+  padding: 6px;
+  margin: 2vh;
+  border-radius: 5px;
+ 
+
+  background-color: #c9a44f;
+}
+
+.flex-submit button:active{
+  background-color: #9b7e3c;
+
+}
+
+.cartao-front, .cartao-back{
+  background-image: linear-gradient(45deg, rgb(18, 26, 44), rgb(3, 15, 24));
+    
+
+  width: 50vw;
+  height: 30vw;
+
+  font-size: 1.5vw;
+  font-family: 'Roboto Mono', monospace;
+
+  align-items: end;
+
+  border-radius: 25px;
+  box-shadow: 3px 10px 15px rgb(107, 110, 105);
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column; 
+  justify-content: end;
+  align-items: start;
+}
+
+.cartao-front h1, .cartao-back h1{
+  font-size: 3vw;
+  margin-bottom: auto;
+
+}
+
+.cartao-front .GoldOrder, .cartao-back .GoldOrder{
+  padding-bottom: 5%;
+  height: 20%;
+
+}
+
+/* FLIP ANIMATION */
+.cartao-container {
+  width: 50vw;
+  height: 30vw;
+  position: relative;
+  perspective: 1000px;
+
+}
+
+.cartao-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease;
+  transform-origin: center center; 
+}
+
+.cartao-front,
+.cartao-back {
+
+  position: absolute;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  
+}
+
+
+.cartao-back {
+  transform: rotateY(180deg);
+}
+
+.CardBack-letter{
+  font-size: 1.1vw;
+  color: rgb(173, 158, 99);
+}
+
+.cartao-inner.flip {
+  transform: rotateY(180deg);
+}
+
+/* FINISH FLIP ANIMATION */
+
+
+
+.bottom-card > img {
+  width: 8vw;
+  margin-left: auto;
+}
+
+.cartao-front:hover, .cartao-back:hover{
+ background-image: linear-gradient(45deg, rgb(3, 15, 24), rgb(18, 26, 44));
+
+}
+
+.bottom-card{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center; 
+  width: 100%;
+}
+
+.grid-card{
+  display: grid;
+  grid-template-columns: repeat(2, 35%);
+  gap: 5%;
+  padding: 10px;
+}
+
+
+
+
+@media (max-width: 900px) {
+  .grid-card {
+    display: flex;
+    flex-direction: column-reverse; /* um embaixo do outro */
+    align-items: center; 
+    gap: 10vh 0px;  
+  }
+
+  .SubmitBox {
+    width: 100%;
+  }
+
+}
