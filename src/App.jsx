@@ -60,7 +60,7 @@ function App() {
 
             <div className="cartao-front">
 
-              <img src="/Cardlogo.png" alt="" class="GoldOrder" />
+              <img src="/Cardlogo.png" alt="" className="GoldOrder" />
               <img src="/marca.png" alt="" />
               <h1>{NumCartao}</h1>
 
@@ -73,7 +73,7 @@ function App() {
 
             <div className="cartao-back">
 
-              <img src="/Cardlogo.png" alt="" class="GoldOrder" />
+              <img src="/Cardlogo.png" alt="" className="GoldOrder" />
               <img src="/marca.png" alt="" />
               <h1><span className="CardBack-letter">CVC: </span>{CVC}</h1>
               <div className="bottom-card">

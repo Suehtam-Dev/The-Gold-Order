@@ -134,16 +134,15 @@ header .GoldOrder{
   height: 30vw;
   position: relative;
   perspective: 1000px;
-
+  overflow: visible;
 }
 
 .cartao-inner {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: relative;
   transform-style: preserve-3d;
   transition: transform 0.9s ease;
-  transform-origin: center center; 
 }
 
 .cartao-front,
@@ -159,6 +158,7 @@ header .GoldOrder{
 
 .cartao-back {
   transform: rotateY(180deg);
+  
 }
 
 .CardBack-letter{
@@ -207,6 +207,12 @@ header .GoldOrder{
     flex-direction: column-reverse; /* um embaixo do outro */
     align-items: center; 
     gap: 10vh 0px;  
+      
+  }
+
+  .cartao-front, .cartao-back{
+      width: 65vw;
+      height: 45vw;
   }
 
   .SubmitBox {
